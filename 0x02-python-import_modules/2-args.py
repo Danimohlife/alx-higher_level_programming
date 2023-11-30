@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-import sys
-
 if __name__ == "__main__":
+    import sys
 
     l_st = sys.argv
     ln = len(l_st) - 1
-
     print("{:d} {}".format(ln, 'argument.' if ln <= 1 else 'arguments:'))
 
     ln += 1
