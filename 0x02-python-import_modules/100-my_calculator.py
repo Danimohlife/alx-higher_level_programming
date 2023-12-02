@@ -29,5 +29,5 @@ if __name__ == "__main__":
     elif args.sign == '-':
         print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
     else:
-        print("{}".format("Unknown operator. Available operators: +, -, * and /"))
+        print(f"Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
