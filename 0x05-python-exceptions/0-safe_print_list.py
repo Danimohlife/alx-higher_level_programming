@@ -15,8 +15,9 @@ def safe_print_list(my_list=[], x=0):
     for lop in range(x):
         try:
             print(my_list[lop], end='')
-            count += 1
         except IndexError:
-            print()
-            return count
+            pass
+        count += 1
+        
+    print()
     return count
