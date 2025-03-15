@@ -16,15 +16,14 @@ def list_division(my_list_1, my_list_2, list_length):
             ans = my_list_1[lop] / my_list_2[lop]
         except ZeroDivisionError:
             print("division by 0")
+            ans = 0
         except TypeError:
             print("wrong type")
+            ans = 0
         except IndexError:
             print("out of range")
+            ans = 0
         finally:
-            if ans:
-                my_list_3.append(ans)
-                ans = 0
-            else:
-                my_list_3.append(0)
+            my_list_3.append(ans)
 
     return my_list_3
