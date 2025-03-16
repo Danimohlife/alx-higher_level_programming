@@ -1,17 +1,25 @@
 #!/usr/bin/python3
-
 """
-a square class with an instantiation
-of size with no verification of type
+Module: square
+
+This module defines a Square class with an instantiation of size
+without type verification.
 """
 
 
-class square:
+class Square:
+    """
+    A class that defines a square.
 
-    """square with size instantiation"""
+    Attributes:
+        __size (int): The size of the square (private attribute).
+    """
 
-    
     def __init__(self, size):
+        """
+        Initializes a Square instance.
 
-        """size of a square"""
+        Args:
+            size: The size of the square (no type verification).
+        """
         self.__size = size
