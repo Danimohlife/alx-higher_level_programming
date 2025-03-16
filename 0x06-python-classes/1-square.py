@@ -7,16 +7,9 @@ of size with no verification of type
 
 class square:
 
-    """
-        square with size instantiation
-        a class doc on instance and private
-        attribute objects.
-    """
+    """square with size instantiation"""
 
     def __init__(self, size):
 
-        """
-        size of a square
-        set
-        """
+        """size of a square"""
         self.__size = size
