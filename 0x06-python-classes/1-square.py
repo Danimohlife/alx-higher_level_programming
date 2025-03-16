@@ -12,7 +12,4 @@ class square:
     """
 
     def __init__(self, size):
-        """
-        init private size attribute
-        """
         self.__size = size
