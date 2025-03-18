@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+class Square  with impliment of compare operator.
+
+
+this enable comparism of instance to instance
+or Object to Object
 
 class Square:
     """A class that defines a square with size and comparison capabilities."""
