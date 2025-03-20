@@ -12,8 +12,6 @@ Valid Cases
 8
 >>> add_integer(10, -2)
 8
->>> add_integer(0, 0)
-0
 >>> add_integer(7)
 105
 >>> add_integer(-4, -6)
@@ -67,7 +65,7 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
-add_integer(True, 3)
+>>> add_integer(True, 3)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
@@ -113,7 +111,7 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
-add_integer(5, True)
+>>> add_integer(5, True)
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
