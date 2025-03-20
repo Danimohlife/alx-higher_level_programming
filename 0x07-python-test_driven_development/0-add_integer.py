@@ -41,12 +41,6 @@ def add_integer(a, b=98):
         TypeError: a must be an integer
     """
 
-    if b == None or b == False:
-        b = " "
-
-   if a == None or a == False:
-        a = " "
-
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
 
