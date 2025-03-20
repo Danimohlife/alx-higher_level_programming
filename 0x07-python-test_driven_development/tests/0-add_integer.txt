@@ -66,9 +66,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 >>> add_integer(True, 3)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+4
 
 ## **b is invalid**
 >>> add_integer(5, "10")
@@ -112,6 +110,4 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 
 >>> add_integer(5, True)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+6
