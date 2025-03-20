@@ -1,0 +1,119 @@
+# Doctest for add_integer function
+
+This file contains tests for the function `add_integer(a, b=98)`, ensuring that:
+- It correctly adds two integers.
+- It correctly converts float values to integers before addition.
+- It raises `TypeError` for invalid input types.
+- Default values are properly handled.
+
+Valid Cases
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(5, 3)
+8
+>>> add_integer(10, -2)
+8
+>>> add_integer(0, 0)
+0
+>>> add_integer(7)
+105
+>>> add_integer(-4, -6)
+-10
+>>> add_integer(5.9, 4.1)
+9
+>>> add_integer(-2.7, 8.9)
+6
+>>> add_integer(100.5)
+198
+
+## Invalid Cases
+### a is invalid
+>>> add_integer("10", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer([1, 2], 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer((5, 6), 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer({})
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("A", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("100", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+add_integer(True, 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+## **b is invalid**
+>>> add_integer(5, "10")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, [1, 2])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, (5, 6))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, {})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, "A")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, "")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(5, "100")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+add_integer(5, True)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
