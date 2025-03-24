@@ -40,14 +40,13 @@ class Rectangle:
         Args:
             width (int, optional): The width of the rectangle (default is 0).
             height (int, optional): The height of the rectangle (default is 0).
-
         Raises:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is negative.
         """
         self.width = width
         self.height = height
-        self.number_of_instances += 1
+        Rectangle.number_of_instances =+ 1
 
     @property
     def width(self):
@@ -177,5 +176,5 @@ class Rectangle:
 
         Example:
         """
-        self.number_of_instances -= 1
+        Rectangle.number_of_instances =+ 1
         print("Bye rectangle...")
