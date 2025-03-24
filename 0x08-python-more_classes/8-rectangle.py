@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""
+A module of rectangle vlass with hight and width
+iniciated with 0s properties and setters
+"""
+
+
 class Rectangle:
     """
     A class that defines a rectangle with width and height.
