@@ -1,0 +1,43 @@
+BaseGeometry Class Doctest
+==========================
+
+Testing the BaseGeometry class.
+
+1. Import the class:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+2. Create an instance:
+    >>> bg = BaseGeometry()
+
+3. Test `area()` method:
+    It should raise an exception since it's not implemented.
+    
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+4. Test `integer_validator()` method:
+    Passing a valid integer should not raise any error.
+    
+    >>> bg.integer_validator("width", 10)
+
+    Invalid cases should raise errors:
+
+    a) Non-integer value:
+    >>> bg.integer_validator("width", "10")
+    Traceback (most recent call last):
+    ...
+    TypeError: width must be an integer
+
+    b) Zero value:
+    >>> bg.integer_validator("height", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: height must be greater than 0
+
+    c) Negative value:
+    >>> bg.integer_validator("size", -5)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be greater than 0
