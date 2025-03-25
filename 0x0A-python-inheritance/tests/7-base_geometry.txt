@@ -20,7 +20,7 @@ Testing the BaseGeometry class.
 4. Test `integer_validator()` method:
     Passing a valid integer should not raise any error.
     
-    >>> bg.integer_validator("width", 10)
+    >>> bg.integer_validator("width", 10)  # No output expected
 
     Invalid cases should raise errors:
 
@@ -41,3 +41,39 @@ Testing the BaseGeometry class.
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
+
+    d) Missing argument (should raise TypeError due to missing value):
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    e) Tuple as value (should raise TypeError):
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    f) List as value (should raise TypeError):
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    g) Boolean as value (should raise TypeError):
+    >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    h) Set as value (should raise TypeError):
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+    i) None as value (should raise TypeError):
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
