@@ -1,0 +1,57 @@
+##############################
+# Doctest for MyList class
+##############################
+
+>>> my_list = __import__('1-my_list').MyList
+
+## Test case: Creating an instance of MyList ##
+>>> my_list = MyList([4, 2, 9, 1])
+
+##Test case: Checking if my_list is an instance of list##
+>>> isinstance(my_list, list)
+True
+
+### Test case: Checking if my_list is an instance of MyList
+>>> isinstance(my_list, MyList)
+True
+
+### Test case: Printing the original list
+>>> my_list
+[4, 2, 9, 1]
+
+### Test case: Using print_sorted() method (should print sorted list)
+>>> my_list.print_sorted()
+[1, 2, 4, 9]
+
+### Test case: Ensuring the original list is not modified
+>>> my_list
+[4, 2, 9, 1]
+
+### Test case: Adding new elements and testing sorting
+>>> my_list.append(3)
+>>> my_list.append(8)
+>>> my_list
+[4, 2, 9, 1, 3, 8]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 8, 9]
+
+### Test case: Using an empty list
+>>> empty_list = MyList([])
+>>> empty_list.print_sorted()
+[]
+
+### Test case: Using a list with repeated values
+>>> repeated_list = MyList([5, 3, 5, 3, 5])
+>>> repeated_list.print_sorted()
+[3, 3, 5, 5, 5]
+
+### Test case: Using a list with negative numbers
+>>> negative_list = MyList([-3, -1, -2, 0, 4])
+>>> negative_list.print_sorted()
+[-3, -2, -1, 0, 4]
+
+### Test case: Using a list with mixed positive and negative numbers
+>>> mixed_list = MyList([3, -2, 7, -5, 0])
+>>> mixed_list.print_sorted()
+[-5, -2, 0, 3, 7]
