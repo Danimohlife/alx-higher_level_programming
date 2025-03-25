@@ -2,7 +2,7 @@
 # Doctest for MyList class
 ##############################
 
->>> my_list = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 
 ## Test case: Creating an instance of MyList ##
 >>> my_list = MyList([4, 2, 9, 1])
