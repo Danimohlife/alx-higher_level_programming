@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Function to open file and write to the file
+"""
+
+
 def write_file(filename="", text=""):
     """
     Writes a string to a text file (UTF-8) and returns
