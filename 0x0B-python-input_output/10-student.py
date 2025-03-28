@@ -41,5 +41,5 @@ class Student:
             dict: A dictionary representation of the student.
         """
         if isinstance(att, list) and all(isinstance(atr, str) for atr in att):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+            return {k: getattr(self, k) for k in att if hasattr(self, k)}
         return self.__dict__
