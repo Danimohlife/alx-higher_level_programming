@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 A script that adds all command-line arguments to a
 Python list and saves them to a file.
