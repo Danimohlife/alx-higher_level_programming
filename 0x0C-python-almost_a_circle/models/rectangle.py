@@ -99,7 +99,7 @@ class Rectangle(Base):
         """
         print out the # rep of rectangle
         """
-        print("\n" * self.__y)
+        print("\n" * self.__y, end="")
         for _ in range(self.__height):
             print(" " * self.__x + '#' * self.__width)
 
