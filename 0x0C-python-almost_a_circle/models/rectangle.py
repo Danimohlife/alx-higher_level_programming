@@ -117,9 +117,8 @@ class Rectangle(Base):
         Updates attributes in order of: id, width, height, x, y.
         Args:
             *args: Variable length argument list to update attributes.
-    """
-    attributes = ["id", "width", "height", "x", "y"]
-
-    for i, value in enumerate(args):
-        if i < len(attributes):
-            setattr(self, attributes[i], value)
+        """
+        attributes = ["id", "width", "height", "x", "y"]
+        for i, value in enumerate(args):
+            if i < len(attributes):
+                setattr(self, attributes[i], value)
