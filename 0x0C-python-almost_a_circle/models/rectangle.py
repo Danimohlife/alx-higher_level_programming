@@ -109,4 +109,4 @@ class Rectangle(Base):
         d = self.id
         w = self.__width
         h = self.__height
-        return f"[Rectangle] ({d} {self.__x}/{self.__y} - {w}/{h})"
+        return f"[Rectangle] ({d}) {self.__x}/{self.__y} - {w}/{h})"
