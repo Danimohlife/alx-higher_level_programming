@@ -111,3 +111,15 @@ class Rectangle(Base):
         w = self.__width
         h = self.__height
         return f"[Rectangle] ({d}) {self.__x}/{self.__y} - {w}/{h}"
+
+    def update(self, *args):
+        """
+        Updates attributes in order of: id, width, height, x, y.
+        Args:
+            *args: Variable length argument list to update attributes.
+    """
+    attributes = ["id", "width", "height", "x", "y"]
+
+    for i, value in enumerate(args):
+        if i < len(attributes):
+            setattr(self, attributes[i], value)
